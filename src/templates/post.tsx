@@ -113,7 +113,7 @@ const PostContainer = ({ data, children }) => {
             post.frontmatter.categories.map((category) => (
               <li key={category}>
                 <Link
-                  to={`/categories/${category}`}
+                  to={`/categories/${category.replace(/\s/g, '-')}`}
                   title={`All posts in category ${category}`}
                   rel="category tag"
                 >
@@ -125,7 +125,7 @@ const PostContainer = ({ data, children }) => {
             post.frontmatter.series.map((series) => (
               <li key={series}>
                 <Link
-                  to={`/categories/${series}`}
+                  to={`/categories/${series.replace(/\s/g, '-')}`}
                   title={`All posts in series ${series}`}
                   rel="series tag"
                 >
@@ -246,7 +246,7 @@ const AfterPostTags = ({ data }) => {
             <Link
               key={tag}
               rel="tag"
-              to={`/tags/${tag}`}
+              to={`/tags/${tag.replace(/\s/g, '-')}`}
               title={`All post with tag ${tag}`}
             >
               {tag}
