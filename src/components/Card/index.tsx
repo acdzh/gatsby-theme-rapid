@@ -1,5 +1,5 @@
 /* eslint-disable jsx-a11y/click-events-have-key-events */
-import React, { useEffect } from 'react';
+import React from 'react';
 import { useStateSafe } from '../../hooks/useStateSafe';
 import clsx from 'clsx';
 
