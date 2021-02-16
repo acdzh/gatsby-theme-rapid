@@ -1,10 +1,15 @@
 /* eslint-disable jsx-a11y/heading-has-content */
 /* eslint-disable react/display-name */
+import React from 'react';
+import clsx from 'clsx';
 import { NetEaseMusicPlayer } from '../components/shortcodes/NetEaseMusicPlarer';
 import { Section } from '../components/shortcodes/Section';
 import { YouTube } from '../components/shortcodes/YouTube';
 import { Bilibili } from '../components/shortcodes/Bilibili';
 import { CodePen } from '../components/shortcodes/CodePen';
+import Button from '../components/Button';
+
+import './post-components.css';
 
 type ComponentsType = {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -17,4 +22,8 @@ export const MDXComponents: ComponentsType = {
   youtube: YouTube,
   bilibili: Bilibili,
   codepen: CodePen,
+  Button,
+  Input: (props) => (
+    <input className={clsx('input', props.className || '')} {...props} />
+  ),
 };

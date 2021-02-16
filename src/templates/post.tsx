@@ -297,7 +297,13 @@ const BlogPostTemplate: React.FC<DataType> = ({ data }) => {
               <span className="leancloud-visitors-count"></span>
             </span>
             &nbsp; Visitors |&nbsp;
-            <a href="//github.com/acdzh/gatsby-blog-src/blog">
+            <a
+              href={`//github.com/acdzh/gatsby-blog-src/blob/master/blog/${
+                post.fileAbsolutePath.split('content/blog/')[1] || ''
+              }`}
+              target="_blank"
+              rel="noreferrer"
+            >
               raw on <i className="fab fa-github"></i>
             </a>
           </p>
@@ -337,6 +343,7 @@ export const pageQuery = graphql`
       excerpt(pruneLength: 160)
       body
       tableOfContents(maxDepth: 10)
+      fileAbsolutePath
       frontmatter {
         tags
         author

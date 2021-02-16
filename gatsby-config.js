@@ -65,6 +65,12 @@ module.exports = {
         name: 'assets',
       },
     },
+    {
+      resolve: 'gatsby-plugin-static-folders',
+      options: {
+        folders: ['./content/static'],
+      },
+    },
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
     {
