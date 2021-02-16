@@ -35,7 +35,7 @@ const SeriesTemplate: React.FC<SeriesTemplatePropsType> = ({
   const { totalCount = 0, nodes: posts = [] } = data.allMdx;
   return (
     <Layout>
-      <SEO title="All Categories" />
+      <SEO title={`Series: ${series}`} />
       <Card>
         <div style={{ padding: '20px 30px ' }}>
           <h1

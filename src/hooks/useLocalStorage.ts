@@ -1,4 +1,5 @@
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
+import { useStateSafe } from './useStateSafe';
 
 export const useLocalStorage = <T>(
   key: string,
@@ -21,7 +22,7 @@ export const useLocalStorage = <T>(
   };
   // State to store our value
   // Pass initial state function to useState so logic is only executed once
-  const [storedValue, setStoredValue] = useState<T>(readValue);
+  const [storedValue, setStoredValue] = useStateSafe<T>(readValue);
   // Return a wrapped version of useState's setter function that ...
   // ... persists the new value to localStorage.
   const setValue = (value: T | ((v: T) => T)) => {

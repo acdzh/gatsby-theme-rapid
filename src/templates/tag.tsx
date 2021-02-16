@@ -33,7 +33,7 @@ const TagTemplate: React.FC<TagTemplatePropsType> = ({ pageContext, data }) => {
   const { totalCount = 0, nodes: posts = [] } = data.allMdx;
   return (
     <Layout>
-      <SEO title="All Tags" />
+      <SEO title={`Tag: ${tag}`} />
       <Card>
         <div style={{ padding: '20px 30px ' }}>
           <h1

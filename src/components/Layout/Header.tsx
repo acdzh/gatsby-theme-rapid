@@ -118,6 +118,11 @@ export const Header: React.FC = () => {
                 })}
                 aria-hidden="true"
               ></i>
+              {/* &nbsp;&nbsp;
+              <i className="fa fa-sun" aria-hidden="true"></i>
+              &nbsp;/&nbsp;
+              <i className="fa fa-moon" aria-hidden="true"></i>
+              &nbsp;&nbsp; */}
             </button>
           </div>
         </div>

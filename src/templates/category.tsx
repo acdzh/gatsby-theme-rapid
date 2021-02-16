@@ -35,7 +35,7 @@ const CategoryTemplate: React.FC<CategoryTemplatePropsType> = ({
   const { totalCount = 0, nodes: posts = [] } = data.allMdx;
   return (
     <Layout>
-      <SEO title="All Categories" />
+      <SEO title={`Category: ${category}`} />
       <Card>
         <div style={{ padding: '20px 30px ' }}>
           <h1

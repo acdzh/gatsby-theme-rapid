@@ -1,5 +1,6 @@
 /* eslint-disable jsx-a11y/click-events-have-key-events */
-import React, { useState } from 'react';
+import React, { useEffect } from 'react';
+import { useStateSafe } from '../../hooks/useStateSafe';
 import clsx from 'clsx';
 
 import './index.css';
@@ -21,13 +22,14 @@ const Card: React.FC<CardPropsType> = ({
   canFold = true,
   defaultFold = 'never',
 }) => {
-  const [isFolded, setIsFolded] = useState(
+  const [isFolded, setIsFolded] = useStateSafe<boolean>(
     defaultFold === 'auto'
       ? typeof window === 'undefined' || window.innerWidth > 812
         ? false
         : true
       : defaultFold === 'always'
   );
+
   return (
     <div
       className={clsx('card-container', {
