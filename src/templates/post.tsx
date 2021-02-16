@@ -125,7 +125,7 @@ const PostContainer = ({ data, children }) => {
             post.frontmatter.series.map((series) => (
               <li key={series}>
                 <Link
-                  to={`/categories/${series.replace(/\s/g, '-')}`}
+                  to={`/series/${series.replace(/\s/g, '-')}`}
                   title={`All posts in series ${series}`}
                   rel="series tag"
                 >
