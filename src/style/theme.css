@@ -1,5 +1,6 @@
 :root {
-  --Primary: #008080; /* DO NOT use light color as Primary Color! */
+  /* DO NOT use light color as Primary Color! */
+  --Primary: #308080;
   /* --Primary: #c26d46; */
   --ConstTextPrimary: rgba(255, 255, 255, .8);
   --ConstTextSecondary: rgba(255, 255, 255, .4);
@@ -26,7 +27,7 @@
 }
 
 [data-theme=dark]:root {
-  --Primary: #008080; /* DO NOT use light color as Primary Color! */
+  --Primary: #308080;
   /* --Primary: #c26d46; */
   --ConstTextPrimary: rgba(255, 255, 255, .8);
   --ConstTextSecondary: rgba(255, 255, 255, .4);
