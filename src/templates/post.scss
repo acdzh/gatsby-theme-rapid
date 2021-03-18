@@ -152,6 +152,14 @@
     border-radius: 6px;
   }
 
+  :not(.gatsby-resp-image-background-image) > img {
+    position: relative;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 650px;
+  }
+
   :not(pre) > code {
     margin: 0 0.1em;
     font-size: 14px;
