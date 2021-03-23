@@ -27,7 +27,7 @@
 }
 
 [data-theme=dark]:root {
-  --Primary: #308080;
+  --Primary: #1b7e7e;
   /* --Primary: #c26d46; */
   --ConstTextPrimary: rgba(255, 255, 255, .8);
   --ConstTextSecondary: rgba(255, 255, 255, .4);
