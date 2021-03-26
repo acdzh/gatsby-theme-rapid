@@ -16,6 +16,8 @@
 
   white-space: nowrap;
   overflow: hidden;
+
+  border-bottom: 1px solid var(--LineSeparatorPrimary);
 }
 
 .folded .card-container-top {
@@ -32,13 +34,12 @@
 }
 
 .card-container-top__const {
-  border-bottom: 1px solid var(--LineSeparatorPrimary);
   color: var(--TextThird);
 }
 
 .card-container-top__primary {
-  background-color: var(--Primary);
-  color: var(--ConstTextPrimary);
+  background-color: var(--BgHeader);
+  color: var(--TextOnBg);
 }
 
 
